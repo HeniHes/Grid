@@ -9,13 +9,47 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="box header">Header</div>
-      <div class="box sidebar">Sidebar</div>
-      <div class="box sidebar2">Sidebar 2</div>
-      <div class="box content">Content
-        <br /> More content than we had before so this column is now quite tall.</div>
-      <div class="box footer">Footer</div>
-    </div>
-  </body>
+   <!-- your HTML file: -->
+<body>
+  <h1>THE TITLE OF YOUR WEBPAGE</h1>
+  <div id="container"></div>
+</body>
+<script>
+  // your JavaScript file
+const container = document.querySelector("#container");
+
+const content = document.createElement("div");
+content.classList.add("content");
+content.textContent = "This is the glorious text-content!";
+
+const redParagraph = document.createElement("p");
+content.classList.add("paragraph");
+redParagraph.style.color="red";
+redParagraph.textContent="Hey I’m red!"
+
+const title=document.createElement("h3");
+title.classList.add("title");
+title.style.color="blue";
+title.textContent="I'm a blue h3!";
+container.appendChild(title);
+
+const divContainer= document.createElement("div");
+divContainer.style.border="1px solid black";
+divContainer.style.background="pink";
+
+const h1Title= document.createElement("h1");
+h1Title.textContent="I'm in a div";
+
+const smallParagraph= document.createElement("p");
+smallParagraph.textContent="ME TOO!"
+divContainer.appendChild(h1Title);
+
+divContainer.appendChild(smallParagraph);
+
+container.appendChild(divContainer);
+container.appendChild(redParagraph);
+container.appendChild(content);
+
+
+</script>
 </html>
