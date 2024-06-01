@@ -11,16 +11,31 @@
   <body>
    <!-- your HTML file: -->
 <body>
-  <h1>THE TITLE OF YOUR WEBPAGE</h1>
+  <!-- <h1>THE TITLE OF YOUR WEBPAGE</h1>
   <div id="container"></div>
   <h2 onclick="changeColor(this)"> Click to change color</h2>
 <button id="myBtn"> Click Me!!</button>
 
 <div class="box" onmouseover="mOver(this)" 
-onmouseout="mOut(this)">Hover to see magic</div>
-
+onmouseout="mOut(this)">Hover to see magic</div> -->
+<input type="text" id="pokemanName" 
+placeholder="enter Pokemon name">
+<button onclick="fetchData()">fetch pokemon</button><br>
+<img src="" alt="Pokemon sprite" id="pokemonSprite" style="display: none;">
 </body>
 <style>
+  .btn{
+    padding:8px 24px;
+  }
+  #pokemonSprite{
+    height: 400px;
+    width: 400px;
+  }
+  .image{
+    height: 220px;
+    width: 220px;
+    object-fit: cover;
+  }
 .box{
   background-color: red;
   color: white;
@@ -33,61 +48,63 @@ onmouseout="mOut(this)">Hover to see magic</div>
   font-weight: bold;
 }
 </style>
-<script>
-  function mOver(obj){
-    obj.innerHTML="Get Off Me";
-    obj.style.background="black";
-  }
-  function mOut(obj){
-    obj.innerHTML="Thanks"
-    obj.style.background="pink"
-
-  }
-  function changeColor(obj){
-    obj.style.color="red";
-  }
-
-  document.getElementById("myBtn").onclick=changeBackgroundColor;
-
-  function changeBackgroundColor(){
-    document.querySelector("body").style.background="black"
-  }
-
-  // your JavaScript file
-const container = document.querySelector("#container");
+<script src="index.js">
 
 
-const content = document.createElement("div");
-content.classList.add("content");
-content.textContent = "This is the glorious text-content!";
+//   function mOver(obj){
+//     obj.innerHTML="Get Off Me";
+//     obj.style.background="black";
+//   }
+//   function mOut(obj){
+//     obj.innerHTML="Thanks"
+//     obj.style.background="pink"
 
-const redParagraph = document.createElement("p");
-content.classList.add("paragraph");
-redParagraph.style.color="red";
-redParagraph.textContent="Hey I’m red!"
+//   }
+//   function changeColor(obj){
+//     obj.style.color="red";
+//   }
 
-const title=document.createElement("h3");
-title.classList.add("title");
-title.style.color="blue";
-title.textContent="I'm a blue h3!";
-container.appendChild(title);
+//   document.getElementById("myBtn").onclick=changeBackgroundColor;
 
-const divContainer= document.createElement("div");
-divContainer.style.border="1px solid black";
-divContainer.style.background="pink";
+//   function changeBackgroundColor(){
+//     document.querySelector("body").style.background="black"
+//   }
 
-const h1Title= document.createElement("h1");
-h1Title.textContent="I'm in a div";
+//   // your JavaScript file
+// const container = document.querySelector("#container");
 
-const smallParagraph= document.createElement("p");
-smallParagraph.textContent="ME TOO!"
-divContainer.appendChild(h1Title);
 
-divContainer.appendChild(smallParagraph);
+// const content = document.createElement("div");
+// content.classList.add("content");
+// content.textContent = "This is the glorious text-content!";
 
-container.appendChild(divContainer);
-container.appendChild(redParagraph);
-container.appendChild(content);
+// const redParagraph = document.createElement("p");
+// content.classList.add("paragraph");
+// redParagraph.style.color="red";
+// redParagraph.textContent="Hey I’m red!"
+
+// const title=document.createElement("h3");
+// title.classList.add("title");
+// title.style.color="blue";
+// title.textContent="I'm a blue h3!";
+// container.appendChild(title);
+
+// const divContainer= document.createElement("div");
+// divContainer.style.border="1px solid black";
+// divContainer.style.background="pink";
+
+// const h1Title= document.createElement("h1");
+// h1Title.textContent="I'm in a div";
+
+// const smallParagraph= document.createElement("p");
+// smallParagraph.textContent="ME TOO!"
+// divContainer.appendChild(h1Title);
+
+// divContainer.appendChild(smallParagraph);
+
+// container.appendChild(divContainer);
+// container.appendChild(redParagraph);
+// container.appendChild(content);
 
 
 
